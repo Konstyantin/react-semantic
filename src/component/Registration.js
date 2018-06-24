@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
-import {Button, Checkbox, Form} from 'semantic-ui-react';
+import {Button, Checkbox, Form, Select} from 'semantic-ui-react';
+import {country} from "../common/country";
 
-class Login extends Component {
-
-    render () {
-
-        return (
+class Registration extends Component {
+    render(){
+        return(
             <div>
                 <div className="ui container">
-                    <h2 className="ui center aligned header">Login component</h2>
+                    <h2 className="ui center aligned header">Registration component</h2>
                     <div className="login-form-container">
                         <Form>
                             <Form.Field>
@@ -20,7 +19,12 @@ class Login extends Component {
                                 <input type="password" placeholder="Password"/>
                             </Form.Field>
                             <Form.Field>
-                                <Checkbox label="I agree to the Terms and Conditions"/>
+                                <label>Password</label>
+                                <input type="password" placeholder="Password"/>
+                            </Form.Field>
+                            <Form.Field>
+                                <label>Country</label>
+                                <Select placeholder='Select your country' options={country} />
                             </Form.Field>
                             <Button type="submit">Submit</Button>
                         </Form>
@@ -31,4 +35,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Registration;

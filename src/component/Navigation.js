@@ -4,6 +4,7 @@ import { Button, Dropdown, Menu } from 'semantic-ui-react';
 import About from './About';
 import Home from './Home';
 import Login from "./Login";
+import Registration from "./Registration";
 
 class Navigation extends Component {
 
@@ -25,12 +26,14 @@ class Navigation extends Component {
 
                             <Menu.Menu position='right'>
                                 <Menu.Item name="login" active={activeItem === "login"} as={Link} to="/login" onClick={this.handleItemClick}/>
+                                <Menu.Item name="registration" active={activeItem === "registration"} as={Link} to="/registration" onClick={this.handleItemClick}/>
                             </Menu.Menu>
                         </Menu>
 
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
                         <Route path="/login" component={Login} />
+                        <Route path="/registration" component={Registration} />
                     </div>
                 </Router>
             </div>
